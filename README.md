@@ -71,7 +71,7 @@ npm install
 npm run dev           # http://localhost:5173
 ```
 
-### 4. (Optional, recommended) Local AI for intervention suggestions
+### 4. Local AI for intervention suggestions
 Install [Ollama](https://ollama.com/download), then:
 ```bash
 ollama pull llama3.2
