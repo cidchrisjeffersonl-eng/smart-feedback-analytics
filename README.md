@@ -21,107 +21,29 @@ A full-stack capstone system that automates the collection, NLP-based analysis, 
 ---
 
 ## 🗂 Project Structure
-smart-feedback-analytics/
-│
-├── backend/
-│   ├── src/
-│   │   ├── config/              # Environment, DB, app configuration
-│   │   │   ├── db.ts
-│   │   │   ├── env.ts
-│   │   │   └── index.ts
-│   │   │
-│   │   ├── controllers/         # HTTP request handlers
-│   │   │
-│   │   ├── routes/              # Express route definitions
-│   │   │
-│   │   ├── services/            # Business logic
-│   │   │   ├── auth.service.ts
-│   │   │   ├── sentiment.service.ts
-│   │   │   └── ai.service.ts
-│   │   │
-│   │   ├── repositories/        # Database access layer (replaces models)
-│   │   │   ├── feedback.repository.ts
-│   │   │   └── user.repository.ts
-│   │   │
-│   │   ├── middleware/          # Auth, validation, error handling
-│   │   │   ├── auth.middleware.ts
-│   │   │   ├── validate.middleware.ts
-│   │   │   ├── rateLimit.middleware.ts
-│   │   │   └── error.middleware.ts
-│   │   │
-│   │   ├── validators/          # Zod schemas
-│   │   │
-│   │   ├── utils/               # Helper functions
-│   │   │   ├── logger.ts
-│   │   │   ├── jwt.ts
-│   │   │   └── formatters.ts
-│   │   │
-│   │   ├── types/               # Shared TypeScript types/interfaces
-│   │   │
-│   │   ├── constants/           # App constants
-│   │   │
-│   │   ├── jobs/                # Scheduled/background jobs (optional)
-│   │   │
-│   │   ├── app.ts               # Express app configuration
-│   │   └── server.ts            # Server startup
-│   │
-│   ├── tests/
-│   │   ├── unit/
-│   │   └── integration/
-│   │
-│   ├── package.json
-│   └── tsconfig.json
-│
-├── frontend/
-│   ├── src/
-│   │   ├── assets/              # Images, icons, logos
-│   │   │
-│   │   ├── components/
-│   │   │   ├── common/          # Reusable UI components
-│   │   │   ├── layout/          # Navbar, Footer, Sidebar
-│   │   │   └── feedback/        # Feature-specific components
-│   │   │
-│   │   ├── pages/               # Route pages
-│   │   │
-│   │   ├── services/            # API calls
-│   │   │   ├── apiClient.js
-│   │   │   ├── authService.js
-│   │   │   └── feedbackService.js
-│   │   │
-│   │   ├── context/             # React Context providers
-│   │   │
-│   │   ├── hooks/               # Custom hooks
-│   │   │
-│   │   ├── utils/               # Helpers
-│   │   │
-│   │   ├── constants/           # Static values
-│   │   │
-│   │   ├── styles/              # Global styles/themes
-│   │   │
-│   │   ├── config/              # Frontend configs
-│   │   │   └── siteContent.js
-│   │   │
-│   │   ├── routes/              # React Router configuration
-│   │   │
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   │
-│   ├── tests/
-│   ├── package.json
-│   └── vite.config.js
-│
-├── database/
-│   ├── migrations/
-│   ├── seeds/
-│   └── schema.sql
-│
-├── docs/                        # API docs, architecture docs
-│
-├── .env.example
-├── .gitignore
-├── docker-compose.yml
-├── README.md
-└── package.json                 # Optional root workspace package
+smart-feedback-analytics/ 
+├── backend/ 
+│ └── src/ 
+│ ├── config/ # DB pool, migration, seed scripts 
+│ ├── controllers/ # request handlers 
+│ ├── middleware/ # auth guards, validation, rate limiting 
+│ ├── models/ # SQL queries 
+│ ├── routes/ # Express routers 
+│ ├── services/ # sentiment analysis, AI suggestions, auth logic 
+│ ├── validators/ # Zod schemas 
+│ ├── types/ # shared TS types 
+│ └── index.ts # server entry 
+├── frontend/ 
+│ └── src/ │ 
+├── components/ # Navbar, ConfirmModal, Spinner 
+│ ├── context/ # ToastContext 
+│ ├── pages/ # all route-level pages 
+│ ├── services/ # axios client 
+│ ├── siteContent.js # homepage content config — edit here, not in components 
+│ └── App.jsx 
+├── database/ 
+│ └── schema.sql 
+└── docker-compose.yml # local PostgreSQL
 
 ---
 
