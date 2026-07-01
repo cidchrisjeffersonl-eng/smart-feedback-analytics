@@ -121,11 +121,6 @@ No API key needed — it runs entirely on your machine. If Ollama isn't running,
 
 ---
 
-## 📝 Editing Homepage Content
-
-All homepage text and images live in `frontend/src/siteContent.js` — edit that one file (school/project name, hero slides, objectives, modules, footer info). No need to touch any component code.
-
----
 
 ## 👤 Author
 
